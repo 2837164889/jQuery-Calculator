@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>计算器jq+js+html+css</title>
+		<script src="js/jquery-1.9.1.js"></script>
+		<!--导入jquery的UI框架 -->
+		<script src="js/jquery-ui.js"></script>
+		<!--导入jquery的提示框框架-->
+		<script src="js/jquery.growl.js"></script>
+		<script src="js/jquery-confirm.js"></script>
+		<script>
+			$(function() {
+				//JQ的UI插件实现 拖动
+				$("#wai").draggable();	
+				$("button").click(function(){
+					$("#wai").append('<embed id="m_bg_music"  loop=true  volume="60" autostart=true hidden=true src="media/hm4ld.mp3" />');
+				});
+			});
+			$(function(){
+				//JQ的执行关机函数 
+				guan1.onclick();
+			});
+			$(function(){
+				//调用JQuery的弹窗框架
+				 $.alert({
+				     title: '计算器说明与介绍',
+				     content: '本项目使用了html+JQ+css+JS等前端技术开发的计算器(可拖动) 左上角有音乐播放器(网易云)考虑有的人嫌吵所以默认关闭需要自己开启 计算器应该不需要什么使用方法吧....',
+				 });
+				 //调用jquery的ui框架
+				 $.growl.notice({
+					title: '计算器',
+					message:'欢迎使用计算器'
+				 });
+			});
+		</script>
+		<!--head中调用css文件-->
+		<link rel="stylesheet" type="text/css" href="css/jisuanqi.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.growl.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery-confirm.css" />
+	</head>
+	<!--body中添加css背景元素-->
+	<body style="background-image: url(img/3.jpg);">
+	<iframe id="bgm" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=927450421&auto=1&height=90"></iframe>
+		<div id="wai" style="background-image: url(img/);">
+			<div id="zi">计算器</div>
+			<div id="sj">2022年</div>
+			<div id="bw">
+				<input type="text" name="" id="wenben" value="0" disabled="false" />
+			</div>
+			<table border="0" cellspacing="0" cellpadding="" id="biaoge">
+				<tr>
+					<td><button id="qk" style="background:#ffb64e;">C</button></td>
+					<td><button id="tuige" style="background:#ffb64e;">退格</button></td>
+					<td><button style="background:plum;">hfc</button></td>
+					<td><button id="kai" style="background:#c1d6cf;">开机</button></td>
+					<td><button id="guan" style="background:#c1d6cf;">关机</button></td>
+				</tr>
+				<tr>
+					<td><button class="an">7</button></td>
+					<td><button class="an">8</button></td>
+					<td><button class="an">9</button></td>
+					<td><button id="bfh" style="background:#a5b3d3;">%</button></td>
+					<td><button id="p" style="background:#a5b3d3;">π</button></td>
+				</tr>
+				<tr>
+					<td><button class="an">4</button></td>
+					<td><button class="an">5</button></td>
+					<td><button class="an">6</button></td>
+					<td><button class="ysf" style="background:#a5b3d3;">*</button></td>
+					<td><button class="ysf" style="background:#a5b3d3;">/</button></td>
+				</tr>
+				<tr>
+					<td><button class="an">1</button></td>
+					<td><button class="an">2</button></td>
+					<td><button class="an">3</button></td>
+					<td><button class="ysf" style="background:#a5b3d3;">+</button></td>
+					<td><button class="ysf" style="background:#a5b3d3;">-</button></td>
+				</tr>
+				<tr>
+					<td><button class="an">0</button></td>
+					<td><button class="an">00</button></td>
+					<td><button class="an" style="background:#a5b3d3;">.</button></td>
+					<td colspan="2"><button id="denghao" style="width: 100px;height: 40px;border-radius: 20px;background:#a5b3d3;">=</button></td>
+				</tr>
+			</table>
+		</div>
+		<script src="js/shijian.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jisuanqi.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jy.js" type="text/javascript" charset="utf-8"></script>
+		<!--鼠标点击任意地方烟花特效-->
+		<script src="js/yanhua.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
